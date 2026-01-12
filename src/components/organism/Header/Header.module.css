@@ -1,4 +1,4 @@
-/* .header {
-    width: 1920px;
-    height: 140px;
-} */
+.header {
+    border-bottom: 1px solid #e9e9e9;
+    position: relative;
+}
