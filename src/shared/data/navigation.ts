@@ -9,3 +9,11 @@ export const navigations : Array<INavigation> = [
     { title: "Buy Now", id: 6, isIcon: false },
 ]
 
+export const subNavigations : Array<INavigation> = [
+    { title: "Post Header", id: 1, isIcon: true },
+    { title: "Post Layout", id: 2, isIcon: true },
+    { title: "Share Buttons", id: 3, isIcon: true },
+    { title: "Gallery Post", id: 4, isIcon: true },
+    { title: "Video Post", id: 5, isIcon: true },
+]
+

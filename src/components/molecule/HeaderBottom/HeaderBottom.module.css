@@ -1,4 +1,4 @@
-.nav{
+.nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -9,10 +9,34 @@
 
 }
 
-.navItem{
+.navItem {
     display: flex;
     align-items: center;
-    gap : 5px;
+    gap: 5px;
     list-style: none;
 }
 
+
+
+.navItemWrapper {
+    position: relative;
+}
+
+.navTitle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+
+.navItemWrapper ul {
+    display: none;
+    position: absolute;
+    top : 100%;
+    left: 0;
+}
+
+.navItemWrapper:hover ul {
+    display: block;
+}
