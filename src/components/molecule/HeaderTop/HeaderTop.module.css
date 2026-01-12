@@ -1,0 +1,7 @@
+.headerTop{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 29px;
+    border-bottom: 1px solid #e9e9e9;
+}

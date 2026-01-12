@@ -3,7 +3,9 @@ import logo from '../../../shared/assets/logo.png';
 
 export const Logo = () => {
   return (
-    <img className={style.logo} src={logo} alt="logo" />
+    <div className={style.logoBlock}>
+      <img className={style.logo} src={logo} alt="logo" />
+    </div>
   )
 }
 

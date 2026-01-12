@@ -2,7 +2,7 @@ import { Header } from '../../organism/Header/Header';
 
 export const Home = () => {
   return (
-    <div className="home">
+    <div>
         <Header />
     </div>
   )
