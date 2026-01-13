@@ -1,45 +1,13 @@
-import { useEffect, useState } from 'react'
-import { HeaderBottom } from '../../molecule/HeaderBottom/HeaderBottom'
 import { HeaderTop } from '../../molecule/HeaderTop/HeaderTop'
+import { HeaderBottom } from '../../molecule/HeaderBottom/HeaderBottom'
 import style from './Header.module.css'
+import { useScrollHeader } from '../../../shared/hooks/UseScrollHeaderOptions'
 
 export const Header = () => {
-  const [isSticky, setIsSticky] = useState<boolean>(false)
-  const [hideMenu, setHideMenu] = useState<boolean>(false)
-
-  const STICKY_POINT = 200
-  const HIDE_OFFSET = 250 
-
-  useEffect(() => {
-    let lastScroll = 0
-
-    const onScroll = () => {
-      const currentScroll = window.scrollY
-
-      if (currentScroll > STICKY_POINT) {
-        setIsSticky(true)
-      } else {
-        setIsSticky(false)
-        setHideMenu(false)
-      }
-
-      if (
-        currentScroll > lastScroll &&
-        currentScroll > STICKY_POINT + HIDE_OFFSET
-      ) {
-        setHideMenu(true)
-      }
-
-      if (currentScroll < lastScroll) {
-        setHideMenu(false)
-      }
-
-      lastScroll = currentScroll
-    }
-
-    window.addEventListener('scroll', onScroll)
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+  const { isSticky, hideMenu } = useScrollHeader({
+    stickyPoint: 200,
+    hideOffset: 250,
+  })
 
   return (
     <header
