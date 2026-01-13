@@ -4,11 +4,10 @@ import style from './Modal.module.css'
 
 type MoadlPropsType = {
   post: IPost | null
+  closeModalHandler: () => void
 }
 
-export const Modal = ({ post }: MoadlPropsType) => {
-
-
+export const Modal = ({ post, closeModalHandler }: MoadlPropsType) => {
 
   ///Esi refactor
   const images: IPostImages = { img: post?.img ?? '', img_2x: post?.img_2x ?? '' }
@@ -17,8 +16,11 @@ export const Modal = ({ post }: MoadlPropsType) => {
 
 
   return (
-    <div className={style.modalOverlay}>
-      <div className={style.modalContent}>
+    <div className={style.modalOverlay}  onClick={closeModalHandler}>
+      <div className={style.modalContent} onClick={(e) => e.stopPropagation()}>
+        <button
+          onClick={closeModalHandler}
+          className={style.modalClose}>X</button>
         <PostImage images={images} />
         <PostDescription descriptions={descriptions} />
       </div>

@@ -27,6 +27,8 @@ export const Home = () => {
     setOpenModal(true)
   }
 
+  const closeModalHandler = () => setOpenModal(false)
+
   useEffect(() => {
     const fetchPosts = async () => {
       const data = await postApi.getPosts()
@@ -41,7 +43,7 @@ export const Home = () => {
 
   return (
     <>
-      {openModal && createPortal(<Modal post={post} />, document.getElementById('modal')!)}
+      {openModal && createPortal(<Modal post={post} closeModalHandler={closeModalHandler} />, document.getElementById('modal')!)}
       <PostContext.Provider value={{
         posts: filterPosts,
         searchText,
