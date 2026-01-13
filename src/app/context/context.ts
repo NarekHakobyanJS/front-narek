@@ -6,6 +6,7 @@ type PostContextType = {
     searchText : string
     serachTextHandler : (e : ChangeEvent<HTMLInputElement>) => void
 }
+
 const PostContext = createContext<{} | PostContextType>({})
 
 export {PostContext}
