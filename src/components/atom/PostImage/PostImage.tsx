@@ -1,10 +1,13 @@
 import style from './PostImage.module.css';
-import nkar from '../../../shared/assets/1.png';
 
-export const PostImage = () => {
+type PostImagePropsType = {
+  image: string
+}
+
+export const PostImage = ({ image }: PostImagePropsType) => {
   return (
     <div className={style.postImage}>
-        <img src={nkar} alt="nkar" />
+      <img src={image} alt="nkar" />
     </div>
   )
 }
