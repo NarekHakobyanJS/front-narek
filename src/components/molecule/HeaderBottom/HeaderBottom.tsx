@@ -9,6 +9,7 @@ export const HeaderBottom = () => {
   return (
     <nav className={style.nav}>
       {navigations.map((navigation) => (
+        
         <ul key={navigation.title} className={style.navItem}>
           <li className={style.navItemWrapper}>
             <div className={style.navTitle}>

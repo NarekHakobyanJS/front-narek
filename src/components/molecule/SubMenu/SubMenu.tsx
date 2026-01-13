@@ -11,8 +11,8 @@ const SubMenu = () => {
       {
         subNavigations.map((subNavigation) => {
           return (
-            <div className={style.subNavTitle}>
-              <NavigationTitle key={subNavigation.id} title={subNavigation.title} />
+            <div className={style.subNavTitle} key={subNavigation.id}>
+              <NavigationTitle key={subNavigation.id} title={subNavigation.title} subClass='subClass'/>
               {subNavigation.isIcon && <Arrow direction={ArrowDirection.left} />}
             </div>
 
