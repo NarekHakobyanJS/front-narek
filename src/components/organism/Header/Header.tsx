@@ -1,8 +1,8 @@
 import { HeaderTop } from '../../molecule/HeaderTop/HeaderTop'
 import { HeaderBottom } from '../../molecule/HeaderBottom/HeaderBottom'
-import style from './Header.module.css'
 import { useScrollHeader } from '../../../shared/hooks/UseScrollHeaderOptions'
-import { useState } from 'react'
+
+import style from './Header.module.css'
 
 export const Header = () => {
 
