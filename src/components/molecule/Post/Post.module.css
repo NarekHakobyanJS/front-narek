@@ -1,5 +1,14 @@
-.postBlock{
+.postBlock {
     width: 360px;
     height: 459px;
     cursor: pointer;
+}
+
+@media (max-width: 375px) {
+    .postBlock {
+        width: 336px;
+        height: 459px;
+        cursor: pointer;
+        margin: 0 auto;
+    }
 }

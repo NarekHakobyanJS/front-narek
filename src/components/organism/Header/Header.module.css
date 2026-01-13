@@ -1,16 +1,15 @@
 .header {
-    background: white;
-    border-bottom: 1px solid #eddddd;
-    transition: transform .6s ease;
-  }
-  
-  .sticky {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  
-  .hidden {
-    transform: translateY(-100%);
-  }
-  
+  background: white;
+  border-bottom: 1px solid #eddddd;
+  transition: transform .6s ease;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.hidden {
+  transform: translateY(-100%);
+}

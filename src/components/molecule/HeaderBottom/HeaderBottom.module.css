@@ -40,3 +40,9 @@
 .navItemWrapper:hover ul {
     display: block;
 }
+
+@media (max-width: 375px) {
+    .nav {
+        display: none;
+    }
+}

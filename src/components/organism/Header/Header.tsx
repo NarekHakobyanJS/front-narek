@@ -4,6 +4,7 @@ import style from './Header.module.css'
 import { useScrollHeader } from '../../../shared/hooks/UseScrollHeaderOptions'
 
 export const Header = () => {
+  
   const { isSticky, hideMenu } = useScrollHeader({
     stickyPoint: 200,
     hideOffset: 250,
