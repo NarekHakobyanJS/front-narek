@@ -1,13 +1,15 @@
+import type { IPostImages } from '../../../shared/types/postData.types';
 import style from './PostImage.module.css';
 
+
 type PostImagePropsType = {
-  image: string
+  images : IPostImages
 }
 
-export const PostImage = ({ image }: PostImagePropsType) => {
+export const PostImage = ({ images }: PostImagePropsType) => {
   return (
     <div className={style.postImage}>
-      <img src={image} alt="nkar" />
+      <img src={images.img} alt="nkar" />
     </div>
   )
 }

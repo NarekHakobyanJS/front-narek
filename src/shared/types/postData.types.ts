@@ -1,12 +1,18 @@
-interface IPost {
-    autor: string
-    date: string
+interface IPostImages {
     img: string
     img_2x: string
+}
+interface IPostDescription {
+    autor: string
+    date: string
     tags: string
     text: string
     title: string
     views: string
 }
 
-export type {IPost}
+
+interface IPost extends IPostImages, IPostDescription {
+    
+}
+export type {IPost, IPostImages, IPostDescription}
