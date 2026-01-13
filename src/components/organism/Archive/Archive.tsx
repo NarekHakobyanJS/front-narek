@@ -5,13 +5,14 @@ import { PostContext, type PostContextType } from '../../../app/context/context'
 
 
 export const Archive = () => {
-  const {posts} = useContext(PostContext) as PostContextType
+  const {posts, openModalHandler} = useContext(PostContext) as PostContextType
 
   
+  /// esa dzem
   return (
     <div className={style?.archive}>
        {
-        posts?.map((post) => <Post key={post.title} post={post}/>)
+        posts?.map((post) => <Post key={post.title} post={post} onClick={openModalHandler}/>)
        }
     </div>
   )

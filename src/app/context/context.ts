@@ -5,6 +5,7 @@ type PostContextType = {
     posts : IPost[]
     searchText : string
     serachTextHandler : (e : ChangeEvent<HTMLInputElement>) => void
+    openModalHandler : (post : IPost) => void
 }
 
 const PostContext = createContext<{} | PostContextType>({})

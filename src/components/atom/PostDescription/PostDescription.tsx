@@ -3,7 +3,7 @@ import style from './PostDescription.module.css'
 
 
 type PostDescriptionPropsType = {
-    descriptions : IPostDescription
+    descriptions : IPostDescription | any
 }
 export const PostDescription = ({descriptions} : PostDescriptionPropsType) => {
     

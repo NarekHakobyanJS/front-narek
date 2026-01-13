@@ -10,6 +10,7 @@ import { Modal } from '../../organism/Modal/Modal';
 
 export const Home = () => {
   const [posts, setPosts] = useState<IPost[]>([])
+  const [post, setPost] = useState<IPost | null>(null)
   const [searchText, setSearchText] = useState<string>('')
   const [openModal, setOpenModal] = useState<boolean>(false)
 
@@ -19,6 +20,11 @@ export const Home = () => {
 
   const serachTextHandler = (e: ChangeEvent<HTMLInputElement>) => {
     setSearchText(e.target.value)
+  }
+
+  const openModalHandler = (post: IPost) => {
+    setPost(post)
+    setOpenModal(true)
   }
 
   useEffect(() => {
@@ -35,8 +41,14 @@ export const Home = () => {
 
   return (
     <>
-      {openModal &&  createPortal(<Modal />, document.getElementById('modal')!) }
-      <PostContext.Provider value={{ posts: filterPosts, searchText, serachTextHandler }}>
+      {openModal && createPortal(<Modal post={post} />, document.getElementById('modal')!)}
+      <PostContext.Provider value={{
+        posts: filterPosts,
+        searchText,
+        serachTextHandler,
+        openModalHandler
+
+      }}>
         <Header />
         <Archive />
       </PostContext.Provider>
