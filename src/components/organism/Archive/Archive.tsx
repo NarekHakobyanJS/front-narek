@@ -1,11 +1,13 @@
 import { useContext } from 'react'
 import { Post } from '../../molecule/Post/Post'
 import style from './Archive.module.css'
-import { PostContext } from '../../../app/context/context'
+import { PostContext, type PostContextType } from '../../../app/context/context'
 
 
 export const Archive = () => {
-  const posts = useContext(PostContext)
+  const {posts} = useContext(PostContext) as PostContextType
+
+  
   return (
     <div className={style?.archive}>
        {

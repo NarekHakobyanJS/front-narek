@@ -4,5 +4,6 @@ import { NavigationTitle } from "./NavigationTitle/NavigationTitle";
 import { PostDescription } from "./PostDescription/PostDescription";
 import { PostImage } from "./PostImage/PostImage";
 import { SearchIcon } from "./SearchIcon/SearcIcon";
+import { SearchInput } from "./SearchInput/SearchInput";
 
-export { Arrow, Logo, NavigationTitle, PostDescription, PostImage, SearchIcon }
+export { Arrow, Logo, NavigationTitle, PostDescription, PostImage, SearchIcon, SearchInput }

@@ -1,6 +1,12 @@
-import { createContext } from "react";
+import { createContext, type ChangeEvent } from "react";
 import type { IPost } from "../../shared/types/postData.types";
 
-const PostContext = createContext<null | IPost[]>(null)
+type PostContextType = {
+    posts : IPost[]
+    searchText : string
+    serachTextHandler : (e : ChangeEvent<HTMLInputElement>) => void
+}
+const PostContext = createContext<{} | PostContextType>({})
 
 export {PostContext}
+export type {PostContextType}
