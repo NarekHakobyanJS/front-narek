@@ -6,6 +6,8 @@ type PostContextType = {
     searchText : string
     serachTextHandler : (e : ChangeEvent<HTMLInputElement>) => void
     openModalHandler : (post : IPost) => void
+    openBurgerMenu : () => void
+    closeBurgerMenu :  () => void
 }
 
 const PostContext = createContext<{} | PostContextType>({})

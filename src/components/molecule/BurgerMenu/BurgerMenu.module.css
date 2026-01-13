@@ -1,0 +1,40 @@
+.burger {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(183, 178, 178, 0.7);
+
+}
+
+.burgerMenu{
+    width: 320px;
+    height: 100vh;
+    padding: 15px;
+    background-color: white;
+}
+
+.burgerMenuHeader {
+    display: flex;
+    border-bottom: 1px solid #e9e9e9;
+    padding-bottom: 15px;
+}
+
+.burgerMenuHeader > img {
+    flex-grow: 1;
+}
+
+.burgerMenuClose {
+    font-size: 27px;
+    font-weight: 700;
+    color : black
+}
+
+.burgerNav {
+    display: flex;
+    gap : 4px;
+    text-align: center;
+    align-items: center;
+    border-bottom: 1px solid #e9e9e9;
+}

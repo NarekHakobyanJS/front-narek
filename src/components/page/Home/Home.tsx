@@ -6,9 +6,11 @@ import type { IPost } from '../../../shared/types/postData.types';
 import { PostContext } from '../../../app/context/context';
 import { createPortal } from 'react-dom';
 import { Modal } from '../../organism/Modal/Modal';
+import { BurgerMenu } from '../../molecule/BurgerMenu/BurgerMenu';
 
 
 export const Home = () => {
+  const [burgerMenu, setBurgerMenu] = useState<boolean>(false)
   const [posts, setPosts] = useState<IPost[]>([])
   const [post, setPost] = useState<IPost | null>(null)
   const [searchText, setSearchText] = useState<string>('')
@@ -17,6 +19,8 @@ export const Home = () => {
 
   let filterPosts = posts.filter((post) => post.title.toLowerCase().indexOf(searchText.toLowerCase()) > -1)
 
+  const openBurgerMenu = () => setBurgerMenu(true)
+  const closeBurgerMenu = () => setBurgerMenu(false)
 
   const serachTextHandler = (e: ChangeEvent<HTMLInputElement>) => {
     setSearchText(e.target.value)
@@ -43,12 +47,18 @@ export const Home = () => {
 
   return (
     <>
+
+      {
+        burgerMenu && <BurgerMenu closeBurgerMenu={closeBurgerMenu}/>
+      }
       {openModal && createPortal(<Modal post={post} closeModalHandler={closeModalHandler} />, document.getElementById('modal')!)}
       <PostContext.Provider value={{
         posts: filterPosts,
         searchText,
         serachTextHandler,
-        openModalHandler
+        openModalHandler,
+        openBurgerMenu,
+        closeBurgerMenu
 
       }}>
         <Header />
