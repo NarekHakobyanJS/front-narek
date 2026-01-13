@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import style from './Arrow.module.css'
 import type { ArrowDirection } from '../../../shared/types/arrow.types'
 
 
@@ -11,7 +10,7 @@ type ArrowPropsType = {
 export const Arrow = ({ direction }: ArrowPropsType) => {
 
     const [arrowDirection, setArrowDirection] = useState(direction)
-  
+
 
 
     if (arrowDirection === 1) {

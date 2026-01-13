@@ -1,11 +1,12 @@
+import { NavigationTitle, Arrow } from '../../atom'
+
 import { subNavigations } from '../../../shared/data/navigation'
 import { ArrowDirection } from '../../../shared/types/arrow.types'
-import { Arrow } from '../../atom/Arrow/Arrow'
-import { NavigationTitle } from '../../atom/NavigationTitle/NavigationTitle'
+
 
 import style from './SubMenu.module.css'
 
-const SubMenu = () => {
+export const SubMenu = () => {
   return (
     <ul className={style.subMenu}>
       {
@@ -22,5 +23,3 @@ const SubMenu = () => {
     </ul>
   )
 }
-
-export default SubMenu

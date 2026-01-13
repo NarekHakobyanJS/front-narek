@@ -1,6 +1,6 @@
 import type { INavigation } from "../types/navigation.types";
 
-export const navigations : Array<INavigation> = [
+export const navigations: Array<INavigation> = [
     { title: "Demos", id: 1, isIcon: true },
     { title: "Post", id: 2, isIcon: true },
     { title: "Features", id: 3, isIcon: true },
@@ -9,7 +9,7 @@ export const navigations : Array<INavigation> = [
     { title: "Buy Now", id: 6, isIcon: false },
 ]
 
-export const subNavigations : Array<INavigation> = [
+export const subNavigations: Array<INavigation> = [
     { title: "Post Header", id: 1, isIcon: true },
     { title: "Post Layout", id: 2, isIcon: true },
     { title: "Share Buttons", id: 3, isIcon: true },

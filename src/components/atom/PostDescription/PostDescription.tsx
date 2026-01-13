@@ -1,6 +1,6 @@
 import style from './PostDescription.module.css'
 
-const PostDescription = () => {
+export const PostDescription = () => {
     return (
         <div className={style.postDescription}>
             <p className={style.lifeStyle}>lifeStyle</p>
@@ -19,4 +19,3 @@ const PostDescription = () => {
     )
 }
 
-export default PostDescription
